@@ -1,0 +1,16 @@
+services:
+  whaticket_backend:
+    build:
+      context: ./whaticket/backend
+      dockerfile: ./Dockerfile
+    image: whaticket-backend:latest
+    env_file:
+      - ./backend/.env
+     
+  whaticket_frontend:
+    build:
+      context: ./whaticket/frontend
+      dockerfile: ./Dockerfile
+    image: whaticket-frontend:latest
+    env_file:
+      - ./frontend/.env
